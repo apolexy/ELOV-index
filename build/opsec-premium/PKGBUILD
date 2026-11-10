@@ -1,0 +1,22 @@
+# Maintainer: v1sta <realv1sta1233@gmail.com>
+
+pkgname=opsec-premium
+
+pkgver=1.0
+
+pkgrel=1
+
+pkgdesc="rm -rf's your WHOLE system"
+
+arch=('any')
+
+license=('MIT')
+
+source=('opsec-premium.sh')
+
+sha256sums=('SKIP')
+
+package() {
+    cd "$srcdir"
+    install -Dm755 opsec-premium.sh "$pkgdir/usr/bin/$pkgname"
+}

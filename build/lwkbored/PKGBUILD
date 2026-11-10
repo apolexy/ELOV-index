@@ -1,0 +1,22 @@
+# Maintainer: v1sta <realv1sta1233@gmail.com>
+
+pkgname=lwkbored
+
+pkgver=1.0
+
+pkgrel=1
+
+pkgdesc="yo vista do ur repos have Nvidia dkms 580?"
+
+arch=('any')
+
+license=('MIT')
+
+source=('lwkbored.sh')
+
+sha256sums=('SKIP')
+
+package() {
+    cd "$srcdir"
+    install -Dm755 lwkbored.sh "$pkgdir/usr/bin/$pkgname"
+}

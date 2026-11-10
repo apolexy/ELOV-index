@@ -1,0 +1,22 @@
+# Maintainer: v1sta <realv1sta1233@gmail.com>
+
+pkgname=sys-update
+
+pkgver=2.0
+
+pkgrel=4
+
+pkgdesc="Update your packages across multiple package managers right into your terminal!"
+
+arch=('any')
+
+license=('MIT')
+
+source=('install-system.sh')
+
+sha256sums=('SKIP')
+
+package() {
+    cd "$srcdir"
+    install -Dm755 install-system.sh "$pkgdir/usr/bin/$pkgname"
+}

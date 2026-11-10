@@ -1,0 +1,26 @@
+# Maintainer: v1sta <realv1sta1233@gmail.com>
+
+pkgname=damarts
+
+pkgver=1.0
+
+pkgrel=1
+
+pkgdesc="displays a damarts quote."
+
+arch=('any')
+
+license=('MIT')
+
+source=('damarts.sh')
+
+sha256sums=('SKIP')
+
+package() {
+
+    cd "$srcdir"
+    install -Dm755 damarts.sh "$pkgdir/usr/bin/$pkgname"
+
+}
+
+

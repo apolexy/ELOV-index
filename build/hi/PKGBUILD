@@ -1,0 +1,22 @@
+# Maintainer: v1sta <realv1sta1233@gmail.com>
+
+pkgname=hi
+
+pkgver=1.0
+
+pkgrel=1
+
+pkgdesc="hi."
+
+arch=('any')
+
+license=('MIT')
+
+source=('hi.sh')
+
+sha256sums=('SKIP')
+
+package() {
+    cd "$srcdir"
+    install -Dm755 hi.sh "$pkgdir/usr/bin/$pkgname"
+}

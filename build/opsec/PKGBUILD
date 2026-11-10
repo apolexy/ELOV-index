@@ -1,0 +1,17 @@
+# Maintainer: v1sta <realv1sta1233@gmail.com>
+
+pkgname=opsec
+pkgver=1.0
+pkgrel=2
+pkgdesc="Echoes opsec."
+
+arch=('any')
+license=('MIT')
+
+source=('opsec.sh')
+sha256sums=('SKIP')
+
+package() {
+    cd "$srcdir"
+    install -Dm755 opsec.sh "$pkgdir/usr/bin/$pkgname"
+}
